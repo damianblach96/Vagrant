@@ -1,0 +1,15 @@
+---
+- name: Add users and roles
+  hosts: all
+  become: true
+  vars: 
+    docker_users: 
+      - panda
+      - vagrant
+  roles: 
+   - user
+   - panda
+   - geerlingguy.docker
+   - christiangda.awscli
+   - christiangda.awscli_configure
+   - diodonfrost.terraform
